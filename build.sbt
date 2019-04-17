@@ -1,11 +1,11 @@
 sbtPlugin := true
 
-name := "sbt-antlr4"
+name := "sbt-antlr3"
 
-organization := "com.simplytyped"
+organization := "com.outworkers"
 
-version := "0.8.2"
+version := "0.1.0"
 
-bintrayOrganization := Some("simplytyped")
+bintrayOrganization := Some("outworkers")
 
 licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0"))
