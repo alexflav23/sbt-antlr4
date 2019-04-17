@@ -1,43 +1,37 @@
-# sbt-antlr4
+# sbt-antlr3
 
-This plugin provides an ability to run antlr4 when compiling in sbt 1.1.x and 0.13.x.
+This plugin provides an ability to run antlr3 when compiling in sbt 1.1.x and 0.13.x.
 
 ## How to use
 
-Put your .g4 files in `src/main/antlr4` directory and make `project/sbt-antlr4.sbt`
+Put your .g4 files in `src/main/antlr3` directory and make `project/sbt-antlr3.sbt`
 file with the following contents:
 
     // sbt 1.1.x
-    addSbtPlugin("com.simplytyped" % "sbt-antlr4" % "0.8.2")
-
-    // sbt 0.13.x
-    addSbtPlugin("com.simplytyped" % "sbt-antlr4" % "0.7.13")
+    addSbtPlugin("com.outworkers" % "sbt-antlr3" % "0.1.0")
 
 And, enable the plugin in your `build.sbt` file.
 
     // sbt 1.1.x
-    enablePlugins(Antlr4Plugin)
-
-    // sbt 0.13.x
-    antlr4Settings
+    enablePlugins(Antlr3Plugin)
 
 ## Settings
 
-You can select an antl4 version with:
+You can select an antlr3 version with:
 
-    antlr4Version in Antlr4 := "4.7.2" // default: 4.7.2
+    antlr4Version in Antlr3 := "3.5.2" // default: 3.5.2
 
 `-package` option can be defined by the following setting:
 
-    antlr4PackageName in Antlr4 := Some("com.simplytyped")
+    antlr4PackageName in Antlr3 := Some("com.outworkers")
 
 You can also adjust `-listener`, `-no-listener`, `-visitor`, `-no-visitor`, `-Werror` options:
 
-    antlr4GenListener in Antlr4 := true // default: true
+    antlr4GenListener in Antlr3 := true // default: true
 
-    antlr4GenVisitor in Antlr4 := false // default: false
+    antlr4GenVisitor in Antlr3 := false // default: false
 
-    antlr4TreatWarningsAsErrors in Antlr4 := true // default: false
+    antlr4TreatWarningsAsErrors in Antlr3 := true // default: false
  
 ## License
 

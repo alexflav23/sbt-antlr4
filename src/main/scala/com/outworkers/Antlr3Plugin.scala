@@ -1,8 +1,8 @@
-package com.simplytyped
+package com.outworkers
 
-import sbt.{Def, _}
-import Keys._
+import sbt.Keys._
 import sbt.internal.io.Source
+import sbt.{Def, _}
 
 import scala.sys.process.Process
 
